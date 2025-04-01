@@ -1,0 +1,243 @@
+body{
+    background-color: rgb(255, 232, 158);
+    margin: 0px;
+    font-family: "Boldonse", system-ui;
+}
+
+img{
+    width: 100%;
+    height: 475px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+
+p{
+    margin: 0px;
+    display: inline-block;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #77441f;
+    padding: 10px;
+    column-gap: 25px;
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    padding: 15px;
+    display: inline-block;
+    font-family: "Boldonse", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    color: rgb(250, 241, 230);
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.search-box-container{
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    align-items: center;
+    position: relative;
+}
+
+.search-box-container::after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    border: 2px solid goldenrod;
+    border-radius: 13px;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    opacity: 0;
+    transition: .25s opacity;
+}
+
+.search-box-container:hover::after{
+    opacity: 1;
+}
+
+.search-box-container:has(input:focus)::after{
+    opacity:1;
+}
+
+
+.search-box{
+    flex:1;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.search-box-button{
+    height: 40px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: bisque;
+    font-weight: bold;
+    transition: .25s opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box-button svg{
+    fill: #77441f;
+}
+
+.search-box-container input:focus{
+    outline: none;
+}
+
+
+.search-box-button:hover{
+    opacity: .85;
+}
+
+.search-box-button:active{
+    opacity: .65;
+}
+
+.register-button{
+    height: 42px;
+    border: none;
+    border-radius:5px;
+    background-color: bisque;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.register-button::after{
+    content:'';
+    position: absolute;
+    border: 2px bisque solid;
+    border-radius: 10px;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .35s;
+}
+
+.register-button:hover::after{
+    opacity: 1;
+}
+
+.register-button:active{
+    background-color: burlywood;
+}
+
+.sub-header{
+    background-color: chocolate;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.border-light{
+    position: relative;
+}
+
+.border-light::before,
+.border-light::after{
+    position: absolute;
+    content: '';
+    border: 2px solid rgb(255, 226, 96);
+    border-radius: 5px;
+    top: -5px;
+    left:0px;
+    right: 0px;
+    bottom: -5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: .25s opacity;
+}
+
+.border-light::before{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.border-light:hover::before,
+.border-light:hover::after{
+    opacity: 1;
+}
+
+.border-light a {
+    transition: background-color .1s ease-in-out, color .1s ease-in-out;
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 5px;
+    width: 100%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background-color: rgb(139, 58, 0);
+}
+
+.border-light a:active {
+    background-color: rgb(255, 255, 255);
+    color:#77441f;
+    transition: background-color 0s ease-in-out;
+}
+
+.counter-container{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    background-color: rgb(122, 33, 0, .75);
+    width: max-content;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 75px;
+    border-radius: 25px;
+}
+
+h1{
+    color: bisque;
+    text-shadow: 0 0 2px bisque;
+    text-transform: uppercase;
+}
+
+#countdown {
+    font-size: 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 2px #ffffff;
+}
+
+#blink{
+    text-decoration: none;
+}
+
+
